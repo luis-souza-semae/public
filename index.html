@@ -1,13 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEMAE.TEC.BR - Public</title>
+    <title>SEMAE | Tech Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .tech-gradient { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1e40af 100%); }
+        .text-gradient { background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body>
-    <h3>SEMAE.TEC.BR - Public</h3>
-    <p>Bem-vindo ao site público do SEMAETEC.BR! Aqui você pode encontrar informações sobre nossos serviços, projetos e iniciativas. Explore nosso site para saber mais sobre como estamos contribuindo para o desenvolvimento tecnológico e sustentável.</p>
-    ,<p>Fique à vontade para entrar em contato conosco para mais informações ou para colaborar em nossos projetos. Estamos sempre abertos a novas parcerias e ideias inovadoras!</p> 
+<body class="text-slate-200 font-sans antialiased">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-16 pb-20 lg:pt-32">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                <div class="mb-6 px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium">
+                    Laboratório de Inovação e Testes
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 tracking-tight">
+                    SEMAE <span class="text-gradient">Tech Lab</span>
+                </h1>
+                <p class="max-w-2xl text-lg text-slate-400 mb-10">
+                    Ambiente dedicado ao desenvolvimento, integração e validação de tecnologias emergentes para a modernização do saneamento municipal.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="tech-gradient px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg shadow-blue-500/20">
+                        Acessar Laboratório
+                    </a>
+                    <a href="https://github.com" target="_blank" class="glass px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
+                        <i class="fab fa-github mr-2"></i> Repositórios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tech Stack Section -->
+    <section class="py-20 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-slate-500 uppercase tracking-[0.2em] text-sm mb-12">Stack Tecnológica do Ecossistema</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70 grayscale hover:grayscale-0 transition-all">
+                <div class="flex flex-col items-center">
+                        <i class="fab fa-microsoft text-4xl mb-2 text-blue-400"></i>
+                        <span class="text-xs">Microsoft Azure</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fab fa-google text-4xl mb-2 text-red-400"></i>
+                    <span class="text-xs">Google Cloud / AI</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fab fa-github text-4xl mb-2"></i>
+                    <span class="text-xs">GitHub DevOps</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-microchip text-4xl mb-2 text-emerald-400"></i>
+                    <span class="text-xs">Emerging Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cards -->
+    <section id="projects" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Azure Cloud -->
+            <div class="glass p-8 rounded-2xl hover:translate-y-[-5px] transition-transform">
+                <div class="w-12 h-12 rounded-lg bg-blue-600/20 flex items-center justify-center mb-6 text-blue-500">
+                    <i class="fas fa-cloud text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Infraestrutura Azure</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Hospedagem de aplicações web estáticas, bancos de dados escaláveis e gestão de APIs em ambiente cloud nativo.
+                </p>
+            </div>
+
+            <!-- AI & Google Cloud -->
+            <div class="glass p-8 rounded-2xl hover:translate-y-[-5px] transition-transform">
+                <div class="w-12 h-12 rounded-lg bg-purple-600/20 flex items-center justify-center mb-6 text-purple-500">
+                    <i class="fas fa-brain text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Inteligência Artificial</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Exploração de LLMs, análise preditiva e integração com serviços do Google Cloud para otimização de processos.
+                </p>
+            </div>
+
+            <!-- GitHub CICD -->
+            <div class="glass p-8 rounded-2xl hover:translate-y-[-5px] transition-transform">
+                <div class="w-12 h-12 rounded-lg bg-slate-600/20 flex items-center justify-center mb-6 text-white">
+                    <i class="fas fa-code-branch text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">GitHub DevOps</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Automação de deploys (CI/CD), controle de versão e governança de código para o time de desenvolvimento.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-sm">
+            © 2026 SEMAE São Leopoldo - Laboratório de Tecnologia e Inovação.
+        </p>
+    </footer>
+
 </body>
-</html
+</html>
